@@ -1,0 +1,6 @@
+{
+    "APP_CONSTANTS": {
+      "USER": "user",
+      "REQUEST_TOKEN_KEY": "x-auth-token"
+    }
+}
