@@ -1,0 +1,671 @@
+{
+	"info": {
+		"_postman_id": "5565fc4a-1b72-4e5a-89d8-53c6ec980cf5",
+		"name": "Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13124591",
+		"_collection_link": "https://lunar-escape-568579.postman.co/workspace/test~82c49d74-1340-4512-a8fc-f7fdf601f30c/collection/13124591-5565fc4a-1b72-4e5a-89d8-53c6ec980cf5?action=share&source=collection_link&creator=13124591"
+	},
+	"item": [
+		{
+			"name": "Group Message and Likes",
+			"item": [
+				{
+					"name": "Like Message",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY5Y2M5ZjAyY2NhYjcyY2Y4Nzc1ZDFkIiwiZW1haWwiOiJwb29uYW10QGdtYWlsLmNvbSJ9LCJpYXQiOjE3MjE1NTEzNjcsImV4cCI6MTczMTU1MTM2N30.L3H901Qh7u-h8QNHyWdDcL8HIB8zwAVYi1y-FjXvezk"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"message_id\":\"669d253b4ba52ee19d748880\",\n\t\"like\":\"yes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9898/api/message/like",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"message",
+								"like"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Message",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY5Y2M5YmMyY2NhYjcyY2Y4Nzc1ZDExIiwiZW1haWwiOiJyYXNobWlnQGdtYWlsLmNvbSJ9LCJpYXQiOjE3MjE1NzQ3MDAsImV4cCI6MTczMTU3NDcwMH0._5lQt2AMBvXjl9pRfxnX2iQyLUU9PEMzqMrFo3cIQSw"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"group_id\":\"669cc9412ccab72cf8775d02\",\n\t\"message\":\"Hello Good Morning\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9898/api/message/send",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"message",
+								"send"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Groups & Members",
+			"item": [
+				{
+					"name": "Add Members",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY5Y2M5ZjAyY2NhYjcyY2Y4Nzc1ZDFkIiwiZW1haWwiOiJwb29uYW10QGdtYWlsLmNvbSJ9LCJpYXQiOjE3MjE1NTEzNjcsImV4cCI6MTczMTU1MTM2N30.L3H901Qh7u-h8QNHyWdDcL8HIB8zwAVYi1y-FjXvezk"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"group_id\":\"669cc9412ccab72cf8775d02\",\n\t\"member_id\":[\n\t\t\"669cc9cc2ccab72cf8775d15\",\n\t\t\"669cc9bc2ccab72cf8775d11\"\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9898/api/groups/addMembers",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"groups",
+								"addMembers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Group",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY5Y2M5ZjAyY2NhYjcyY2Y4Nzc1ZDFkIiwiZW1haWwiOiJwb29uYW10QGdtYWlsLmNvbSJ9LCJpYXQiOjE3MjE1NTEzNjcsImV4cCI6MTczMTU1MTM2N30.L3H901Qh7u-h8QNHyWdDcL8HIB8zwAVYi1y-FjXvezk"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:9898/api/groups/delete/669ccacb2ccab72cf8775d2c",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"groups",
+								"delete",
+								"669ccacb2ccab72cf8775d2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Group",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY5Y2M5ZjAyY2NhYjcyY2Y4Nzc1ZDFkIiwiZW1haWwiOiJwb29uYW10QGdtYWlsLmNvbSJ9LCJpYXQiOjE3MjE1NTEzNjcsImV4cCI6MTczMTU1MTM2N30.L3H901Qh7u-h8QNHyWdDcL8HIB8zwAVYi1y-FjXvezk"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"group_name\":\"Poo Group3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9898/api/groups/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"groups",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Groups (Search)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY5Y2M5ZjAyY2NhYjcyY2Y4Nzc1ZDFkIiwiZW1haWwiOiJwb29uYW10QGdtYWlsLmNvbSJ9LCJpYXQiOjE3MjE1NTEzNjcsImV4cCI6MTczMTU1MTM2N30.L3H901Qh7u-h8QNHyWdDcL8HIB8zwAVYi1y-FjXvezk"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"search\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9898/api/groups/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"groups",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Authenticate User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjY5YTVkYzY5ZGUzODRiOTIxMjljOGVhIiwiZW1haWwiOiJzdXJlc2h0QGdtYWlsLmNvbSJ9LCJpYXQiOjE3MjE0ODM1MjksImV4cCI6MTczMTQ4MzUyOX0.g_mEAyHbciVx0J33uDwoBySsjkXszjx-OibAi3UmC3Y"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:9898/api/login/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"login",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin / User Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": []
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": true,
+						"disableUrlEncoding": false,
+						"disableCookies": false
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"rashmig@gmail.com\",\n\t\"password\":\"Welcome@123\",\n\t\"isAdmin\":\"false\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:9898/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9898",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update User",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\t\"_id\": \"669a5774b8c49e640e007257\",\n\t\t\t\"name\": \"Rahul Pattar\",\n\t\t\t\"email\": \"rahulp@gmail.com\",\n\t\t\t\"password\": \"$2a$10$5u94tAoJdUMBglMTg3zQ0OAU06h4djymjJQT.lQGEmD43z4gZ9bz2\",\n\t\t\t\"created_by\": \"669a52a104dbda1054c7d536\",\n\t\t\t\"avatarImg\": \"//www.gravatar.com/avatar/a85c48ef71a0d2c29a3cd1099b354f5d?s=200&r=pg&d=mm\",\n\t\t\t\"isAdmin\": false,\n\t\t\t\"createdAt\": \"2024-07-19T12:09:24.470Z\",\n\t\t\t\"updatedAt\": \"2024-07-19T12:09:24.470Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9898/api/users/updateUser/669a5774b8c49e640e007257",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9898",
+					"path": [
+						"api",
+						"users",
+						"updateUser",
+						"669a5774b8c49e640e007257"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Edit User Detail",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:9898/api/users/669a5774b8c49e640e007257",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9898",
+					"path": [
+						"api",
+						"users",
+						"669a5774b8c49e640e007257"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:9898/api/users/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9898",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Poonam Tarihalkat\",\n\t\"email\":\"poonamt@gmail.com\",\n\t\"password\":\"Welcome@123\",\n\t\"isAdmin\": false,\n\t\"created_by\":\"669a52a104dbda1054c7d536\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:9898/api/users/createUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9898",
+					"path": [
+						"api",
+						"users",
+						"createUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": []
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false,
+				"disableCookies": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:9898/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9898",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
