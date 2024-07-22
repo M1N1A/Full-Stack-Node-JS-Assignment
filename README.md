@@ -19,13 +19,12 @@ npm init
 npm install express
 npm install -g ts-node nodemon
 
-
 express:
-
 npm init --yes
 npx --package typescript tsc --init
 
 npm install express @types/express 
+
 npm install cors @types/cors
 npm install dotenv @types/dotenv
 npm install gravatar @types/gravatar
